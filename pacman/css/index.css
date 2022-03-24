@@ -1,0 +1,50 @@
+body{
+  block-size: 100vh;
+  margin: 0;
+}
+.container{
+  align-items: center;
+  block-size: 100%;
+  display: flex;
+  justify-content: center;
+}
+.pacman{
+  box-sizing: border-box;
+  border-block-start: 7.5rem solid #F1D00A;
+  border-block-end: 7.5rem solid #F1D00A;
+  border-inline-start: 7.5rem solid #F1D00A;
+  border-inline-end: 7.5rem solid transparent;
+  border-radius: 50%;
+  inline-size: 7.5rem;
+  position: relative;
+  filter: drop-shadow(0 0 1px);
+}
+.pacman::before{
+  block-size: 2rem;
+  background-color: #000;
+  border-radius: 50%;
+  content: '';
+  inline-size: 2rem;
+  inset-block-start: -5rem;
+  inset-inline-end: -.5rem;
+  position: absolute;
+}
+@media screen and (min-width: 765px){
+  .pacman{
+    border-block-start: 12.5rem solid #F1D00A;
+    border-block-end: 12.5rem solid #F1D00A;
+    border-inline-start: 12.5rem solid #F1D00A;
+    border-inline-end: 12.5rem solid transparent;
+    inline-size: 12.5rem;
+  }
+  .pacman::before{
+    block-size: 3rem;
+    background-color: #000;
+    border-radius: 50%;
+    content: '';
+    inline-size: 3rem;
+    inset-block-start: -7rem;
+    inset-inline-end: -1rem;
+    position: absolute;
+  }
+}
