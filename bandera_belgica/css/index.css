@@ -1,0 +1,40 @@
+body{
+  block-size: 100vh;
+  margin: 0;
+}
+.container{
+  align-items: center;
+  block-size: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+}
+.flag{
+  block-size: 12.5rem;
+  background-color: #FFD93D;
+  inline-size: 100%;
+  max-inline-size: 31.25rem;
+  position: relative;
+}
+.flag::before{
+  background-color: #000;
+  block-size: 100%;
+  content: '';
+  inline-size: calc(100% / 3);
+  inset-inline-start: 0;
+  position: absolute;
+}
+.flag::after{
+  block-size: 100%;
+  background-color: #D82148;
+  content: '';
+  inline-size: calc(100% / 3);
+  inset-inline-end: 0;
+  position: absolute;
+}
+@media screen and (min-width: 425px){
+  .flag{
+    block-size: 18.75rem;
+  }
+}
