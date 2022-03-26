@@ -1,0 +1,40 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  block-size: 100vh;
+  background-color: #F0A500;
+}
+.notebook{
+  position: relative;
+  background-color: #4D77FF;
+  inline-size: 80%;
+  margin: 0 auto;
+  max-inline-size: 18.125rem;
+  block-size: 27.5rem;
+  border-radius: .5rem;
+  color: white;
+  box-shadow: .8rem .8rem, 1.5rem 1.5rem #515c5c56;
+}
+.circle{
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  border-radius: 50%;
+  background-color: white;
+  color: white;
+  position: absolute;
+  inset-block-start: 2.5rem;
+  inset-inline-start: .8rem;
+  box-shadow: 0 3rem, 0 6rem, 0 9rem, 0 12rem, 0 15rem, 0 18rem, 0 21rem;
+}
+.line{
+  position: absolute;
+  inset-block-start: 2.8rem;
+  inset-inline-start: -1.2rem;
+  border-radius: 2rem;
+  color: #603601;
+  background-color: #603601;
+  inline-size: 3rem;
+  block-size: .8rem;
+  box-shadow: 0 3rem, 0 6rem, 0 9rem, 0 12rem, 0 15rem, 0 18rem, 0 21rem;
+}
