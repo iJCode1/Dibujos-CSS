@@ -1,0 +1,71 @@
+body{
+  margin: 0;
+  block-size: 100vh;
+  display: grid;
+  place-items: center;
+}
+.container{
+  inline-size: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.mushroom{
+  position: relative;
+}
+.head{
+  inline-size: 17.5rem;
+  block-size: 12.5rem;
+  border-radius: 50%;
+  background-color: #e16666;
+  position: relative;
+  color: #605a5a;
+  filter: drop-shadow(0 0 4px);
+  overflow: hidden;
+}
+.head::after{
+  content: '';
+  position: absolute;
+  background-color: white;
+  inline-size: 7rem;
+  block-size: 7rem;
+  border-radius: 50%;
+  inset-block-start: 40%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -40%);
+  color: white;
+  box-shadow: 9rem 0, -9rem 0;
+}
+.face{
+  inline-size: 10rem;
+  block-size: 6rem;
+  background-color: #f7d6b3;
+  inset-block-end: -3.4rem;
+  position: absolute;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  border-radius: 50% 50% 50% 50% / 26% 26% 30% 30%;
+}
+.face::before{
+  content: '';
+  inline-size: 1rem;
+  block-size: 3rem;
+  border-radius: 50%;
+  inset-block-start: 1.5rem;
+  inset-inline-start: 2.5rem;
+  background-color: black;
+  box-shadow: 3.5rem 0;
+  position: absolute;
+}
+.face::after{
+  content: '';
+  inline-size: .3rem;
+  block-size: .8rem;
+  border-radius: 50%;
+  inset-block-start: 2rem;
+  inset-inline-start: 2.85rem;
+  background-color: white;
+  color: white;
+  box-shadow: 3.5rem 0;
+  position: absolute;
+}
