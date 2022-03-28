@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+  block-size: 100vh;
+  display: grid;
+  place-items: center;
+}
+.ghast{
+  block-size: 25rem;
+  inline-size: 17.5rem;
+  background-color: #95c7de;
+  border-radius: 10rem 10rem 0 0;
+  position: relative;
+}
+.ghast::before{
+  content: '';
+  position: absolute;
+  inset-block-end: -3.5rem;
+  background-color: white;
+  color: white;
+  inline-size: 5.9rem;
+  block-size: 6rem;
+  border-radius: 50%;
+  box-shadow: 5.9rem 0, 11.6rem 0;
+}
+.eye{
+  background-color: white;
+  color: white;
+  position: absolute;
+  inset-inline-end: 1.5rem;
+  inset-block-start: 5rem;
+  inline-size: 5rem;
+  block-size: 5rem;
+  border-radius: 50%;
+  box-shadow: -7rem 0;
+}
+.eye::before{
+  content: '';
+  inline-size: 2rem;
+  block-size: 2rem;
+  border-radius: 50%;
+  inset-block-start: 1.5rem;
+  inset-inline-end: .8rem;
+  background-color: #0c63bf;
+  color: #0c63bf;
+  box-shadow: -7rem 0;
+  position: absolute;
+}
