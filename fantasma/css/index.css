@@ -4,14 +4,14 @@ body{
   display: grid;
   place-items: center;
 }
-.ghast{
+.ghost{
   block-size: 25rem;
   inline-size: 17.5rem;
   background-color: #95c7de;
   border-radius: 10rem 10rem 0 0;
   position: relative;
 }
-.ghast::before{
+.ghost::before{
   content: '';
   position: absolute;
   inset-block-end: -3.5rem;
