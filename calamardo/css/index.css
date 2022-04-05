@@ -1,0 +1,169 @@
+:root{
+  --green: #B8D1C8;
+  --gren10: #22584D;
+  --red: #8A1E05;
+  --black: #000;
+  --yellow: #FEFCC9;
+  --border: .125rem;
+}
+body{
+  margin: 0;
+  block-size: 100vh;
+  display: grid;
+  place-items: center;
+}
+.squid{
+  inline-size: 17.5rem;
+  filter: drop-shadow(0 0 10px);
+  position: relative;
+}
+.head{
+  inline-size: 100%;
+  block-size: 10rem;
+  border-radius: 50%;
+  background-color: var(--green);
+  border: var(--border) solid var(--black);
+  border-block-end: transparent;
+  position: relative;
+}
+.hair{
+  position: absolute;
+  inline-size: 1rem;
+  block-size: .75rem;
+  background-color: var(--gren10);
+  color: var(--gren10);
+  border-radius: 50%;
+  filter: none;
+  inset-block-start: 3rem;
+  inset-inline-start: 2rem;
+  box-shadow: 1.5rem -1rem, 3rem 0, 6rem -2rem, 8rem -1rem, 13rem 2rem;
+}
+.chin{
+  inline-size: 8rem;
+  block-size: 4.5rem;
+  background-color: var(--green);
+  margin: 0 auto;
+  margin-block-start: -.6rem;
+  border: var(--border) solid var(--black);
+  border-block-start: transparent;
+}
+.eye{
+  inline-size: 3rem;
+  block-size: 6rem;
+  position: absolute;
+  background-color: var(--yellow);
+  border-radius: 50%;
+  overflow: hidden;
+  border: var(--border) solid var(--black);
+  z-index: 20;
+}
+.eye::before{
+  content: '';
+  inline-size: 100%;
+  block-size: 3rem;
+  inset-block-start: 0;
+  background-color: var(--green);
+  position: absolute;
+  border-block-end: var(--border) solid var(--black);
+}
+.eye::after{
+  content: '';
+  inline-size: 1.2rem;
+  block-size: 1.5rem;
+  border-radius: 50%;
+  inset-block-end: 1.4rem;
+  inset-inline-start: 50%;
+  background-color: var(--red);
+  position: absolute;
+  transform: translate(-50%, 0);
+}
+.eye.eye-left{
+  inset-block-end: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-100%, 50%);
+}
+.eye.eye-right{
+  inset-block-end: 50%;
+  inset-inline-end: 50%;
+  transform: translate(100%, 50%);
+} 
+.eyebrow{
+  --border: .3rem;
+  inline-size: 3rem;
+  block-size: .8rem;
+  border: var(--border) solid var(--black);
+  border-radius: 50%;
+  position: absolute;
+}
+.eye-left + .eyebrow{
+  inset-block-start: 4rem;
+  inset-inline-start: 5.5rem;
+  border-block-start: none;
+  border-inline-end: none;
+  border-inline-start: none;
+}
+.eye-right + .eyebrow{
+  inset-block-start: 3.5rem;
+  inset-inline-end: 5rem;
+  border-block-end: none;
+  border-inline-end: none;
+  border-inline-start: none;
+  transform: rotate(8deg);
+}
+.mouth{
+  inline-size: 12rem;
+  border-radius: 1.5rem;
+  block-size: 2.5rem;
+  background-color: var(--black);
+  background-color: var(--green);
+  margin: 0 auto;
+  margin-block-start: -.5rem;
+  border: var(--border) solid var(--black);
+  border-block-start: transparent;
+  position: relative;
+}
+.mouth::before,
+.mouth::after{
+  --border: .25rem;
+  content: '';
+  inline-size: 1rem;
+  block-size: 1rem;
+  position: absolute;
+  border: var(--border) solid var(--black);
+  border-radius: 50%;
+}
+.mouth::before{
+  inset-inline-start: 1.6rem;
+  inset-block-end: .6rem;
+  border-inline-end: 0;
+  border-block-start: 0;
+  border-block-end: 0;
+}
+.mouth::after{
+  inset-inline-end: 1.6rem;
+  inset-block-end: .6rem;
+  border-inline-start: 0;
+  border-block-start: 0;
+  border-block-end: 0;
+}
+.mouth_line{
+  position: absolute;
+  block-size: .15rem;
+  inline-size: 70%;
+  inset-inline-start: 1.8rem;
+  inset-block-end: 1rem;
+  background-color: var(--black);
+}
+.nose{
+  inline-size: 3rem;
+  block-size: 8rem;
+  background-color: var(--green);
+  position: absolute;
+  border-radius: 50%;
+  inset-block-end: -.5rem;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  border: var(--border) solid var(--black);
+  border-block-start: 0;
+  z-index: 15;
+}
